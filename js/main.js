@@ -55,14 +55,10 @@ if (!isNaN(productSelect) && productSelect <= 4 && productSelect > 0) {
                 alert(`El precio final de su compra es de $${precioFinal}`);
                 break;
             default:
+                alert(`¡Gracias por elegirnos!`);
                 break;
     }
 
 } else{
     alert(`Ha ingresado un valor erróneo. Si desea repetir el menú presione F5`);
 }
-
-
-
-
-alert(`¡Gracias por elegirnos!`);
