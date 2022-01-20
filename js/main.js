@@ -34,12 +34,11 @@ Ingrese número de orden.
 
 if (!isNaN(productSelect) && productSelect <= 4 && productSelect > 0) {
     let quantitySelected = Number(prompt(`¿Qué cantidad querés agregar?`)) 
-    
+
     function multiply (precio, cantidad) {
         precioFinal = precio * cantidad;
         return precioFinal
     }
-
         switch (productSelect) {
             case 1:
                 multiply (argTit.precio, quantitySelected);
@@ -62,3 +61,5 @@ if (!isNaN(productSelect) && productSelect <= 4 && productSelect > 0) {
 } else{
     alert(`Ha ingresado un valor erróneo. Si desea repetir el menú presione F5`);
 }
+
+

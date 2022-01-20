@@ -42,7 +42,8 @@ p {
   display: block; }
 
 .header__logo {
-  padding-top: 20px; }
+  padding-top: 20px;
+  width: 50%; }
 
 .nav-menu {
   text-transform: uppercase;
@@ -58,6 +59,9 @@ p {
 
 .navbar__menu {
   display: flex; }
+
+.gapMain {
+  gap: 75px; }
 
 .footer {
   padding-top: 40px; }
@@ -568,6 +572,95 @@ p {
 @media screen and (max-width: 1680px) {
   .header__logo {
     width: 80%; }
+  .nav-menu {
+    text-transform: uppercase;
+    font-size: 24px;
+    padding: none; }
+  .navbar-nav {
+    display: inline-flex;
+    flex-wrap: nowrap; }
+  .nav-menu__list {
+    padding: 12px; }
+  footer a {
+    font-size: 20px; } }
+
+@media screen and (max-width: 576px) {
+  .title {
+    width: 100%; }
+  .margin__lr {
+    margin: 0px; }
+  .navbar-nav {
+    text-transform: uppercase;
+    font-size: 15px;
+    text-align: center; }
+  .footer__flex {
+    flex-direction: column;
+    text-align: center; }
+  .icon {
+    width: 50px;
+    padding-bottom: 20px; }
+  p {
+    font-size: 15px; } }
+
+@media screen and (max-width: 768px) {
+  .header__logo {
+    width: 50%; }
+  .nav-menu {
+    text-align: center; } }
+
+@media screen and (max-width: 992px) {
+  .header__logo {
+    width: 50%; }
+  .navbar-nav {
+    display: block;
+    text-align: center; }
+  .nav-menu {
+    text-transform: uppercase;
+    font-size: 24px; }
+  .nav-menu__list {
+    padding-left: none;
+    padding-right: none; }
+  footer a {
+    font-size: 20px; } }
+
+@media screen and (max-width: 1280px) {
+  .header__logo {
+    width: 50%; }
+  .nav-menu {
+    text-transform: uppercase;
+    font-size: 24px;
+    padding: none; }
+  .navbar-nav {
+    display: inline-flex;
+    flex-wrap: nowrap; }
+  .nav-menu__list {
+    padding: 12px; }
+  .tiendaRes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 70px; }
+  footer a {
+    font-size: 20px; } }
+
+@media screen and (max-width: 1440px) {
+  .header__logo {
+    width: 50%; }
+  .nav-menu {
+    text-transform: uppercase;
+    font-size: 24px;
+    padding: none; }
+  .navbar-nav {
+    display: inline-flex;
+    flex-wrap: nowrap; }
+  .nav-menu__list {
+    padding: 12px; }
+  footer a {
+    font-size: 20px; } }
+
+@media screen and (max-width: 1680px) {
+  .header__logo {
+    width: 50%; }
   .nav-menu {
     text-transform: uppercase;
     font-size: 24px;

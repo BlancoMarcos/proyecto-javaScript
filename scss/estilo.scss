@@ -67,6 +67,7 @@ p{
 
 .header__logo{
     padding-top: 20px;
+    width: 50%;
 }
 
 .nav-menu{
@@ -87,6 +88,11 @@ p{
 .navbar__menu{
     display: flex;
 }
+
+.gapMain{
+    gap: 75px;
+}
+
 
 // FOOTER
 
