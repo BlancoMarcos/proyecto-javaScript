@@ -6,6 +6,12 @@
   text-decoration: none;
   box-sizing: border-box; }
 
+.caja {
+  border: 1px red solid;
+  height: 100px;
+  width: auto;
+  background-color: #C4D8F2; }
+
 body {
   background-color: black; }
 
