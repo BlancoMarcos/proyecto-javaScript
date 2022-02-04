@@ -30,14 +30,21 @@ products.push(psgSup);
 products.push(psgAlt);
 
 
+// AGREGAMOS ELEMENTOS AL DOM CON jQuery
+
+$(".subTitle").append(`<h2>BIENVENIDO A LA TIENDA DE CAMISETAS</h2>`);
+
+$("#parrafoTienda").append(`<p>Aquí podrá ver y comprar las camisetas que usa Lionel Messi en la actualidad.</p>`);
+
 // CREAMOS LAS CONSTANTES
 
 const input = document.querySelector("#productEnter"); 
 const filterCard = document.querySelector(".cardAlert")
 
 
-// FUNCION CREACION Y FILTRO DE CARDS
+// AGREGAMOS CARDS CON jQuery
 
+$(".cardAlert").append(
 function filtrarCards() {
     filterCard.innerHTML = "";
     const itemSearch = input.value.toLowerCase();
@@ -61,11 +68,7 @@ function filtrarCards() {
     if (filterCard.innerHTML === "") {
         filterCard.innerHTML += `<p>No contamos con el producto que estás buscando.</p>`
     }
-};
-
-input.addEventListener("keyup", filtrarCards);
-filtrarCards();
-
+});
 
 // DETECTAMOS LOS BOTONES DE LAS CARDS 
 
@@ -88,4 +91,3 @@ function addCarrito(e) {
     const prodLS = JSON.parse(localStorage.getItem("Producto"))
     console.log(prodLS.mensaje);
 }
-
