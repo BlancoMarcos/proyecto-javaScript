@@ -65,46 +65,58 @@
             </div>
         </div>
     </header>
-
     <main class="container-fluid main">
-        <div class="subTitle mb-5" id="parrafoTienda"></div>
-        <div class="row justify-content-evenly newConten">
-            <div class="col-3">
-                <input type="text" class="form-control text-center" id="productEnter" placeholder="Ingresá el producto">
-            </div>
-            <div class="col-3 mb-5">
-                <button type="button" class="btn btn-primary" id="verPedido" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal">
-                    Ver mi pedido
-                </button>
-            </div>
-
+        <!-- CARDS creadas desde JSON AJAX / MANIPULACION DE DOM -->
+        <section class="row justify-content-evenly newConten">
             <!-- MODAL -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Tu pedido:</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body" id="modalBody">
-
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                            <button type="button" class="btn btn-warning" data-bs-dismiss="modal"
-                                id="borrarPedido">Borrar pedido</button>
+            <article class="col-10 text-end">
+                <!-- BTN VER CARRO  -->
+                <button type="button" class="btn btn-success mb-5" id="verPedido" data-bs-toggle="modal"
+                    data-bs-target="#miModal">
+                    Ver carrito
+                </button>
+                <div class="modal fade" id="miModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content bg-dark">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalLabel">Tu pedido es:</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <!-- MODAL BODY  -->
+                            <div class="modal-body container-fluid" id="modalBody">
+                                <table class="table text-white">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col"></th>
+                                        <th scope="col">Producto</th>
+                                        <th scope="col">Precio</th>
+                                        <th scope="col">Cantidad</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody class="tablaBody">
+                                    </tbody>
+                                  </table>
+                                  <div class="row">
+                                      <div class="col">
+                                          <h4 class="carritoTotalItem">Total: 0</h4>
+                                      </div>
+                                  </div>
+                            </div>
+                            <div class="modal-footer justify-content-between">
+                                <button type="button" class="btn btn-light btn-sm mx-5"
+                                    data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-outline-danger btn-sm mx-5" id="btnBorra">Vaciar
+                                    carrito</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="row text-center cardAlert d-flex justify-content-around gap-5">
-
-        </div>
+            </article>
+        </section>
+        <section class="row justify-content-evenly main__cardConten">
+        </section>
     </main>
-
     <footer class="container footer">
         <div class="row mx-auto mx-5">
             <div class="col-md-12 d-flex justify-content-around footer__flex mt-5">
@@ -121,5 +133,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
-    <script src="../js/eventos.js"></script>
+    <script src="../js/app.js"></script>
 </body>
